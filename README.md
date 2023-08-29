@@ -4,4 +4,4 @@
 
 | Files | Description |
 | --- | --- |
-| leidenalg-CPM.py | Plasmid clustering by using leidenalg with CPM |
+| leidenalg_CPM.py | Plasmid clustering by using leidenalg with CPM |
