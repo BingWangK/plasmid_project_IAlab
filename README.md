@@ -16,5 +16,5 @@ Folder "data_file" contains the input files for the scripts.
 | pfamscan_CL.zip | A total of 1125 files corresponding to the 1125 clusters. The predicted pfam_models are listed in each file |
 | feature_matrix_processing.jl | To scale all features to 0 - 1 and remove features with < 1% variation |
 | feature_matrix_A.csv | The combined features, which is the input file of "feature_matrix_processing.jl" |
-| regressor_tuning.jl | Hyperparameters tuning |
+| regressor_tuning.jl | Hyperparameters tuning for the base models |
 | feature_matrix_F.csv | The data matrix for model training, which contains target Psum and features |
