@@ -13,4 +13,6 @@ Folder "data_file" contains the input files for the scripts.
 | size.csv, GC.csv, topology.csv, repT-ID.csv, repT.csv, relaxaseT-ID.csv, relaxaseT.csv, mpfT-ID.csv, mpfT.csv, oriT-ID.csv, oriT.csv | The original categorical values of these features |
 | features_pfamscan.sh | Calculate the percentage of the pfam_models in each cluster |
 | pfamscan_CL.txt | It contains the file names that need to be processed by features_pfamscan.sh |
-| pfamscan_CL.zip | A total of 1125 files corresponding to the 1125 clusters. The predicted pfam_models are listed in each file | 
+| pfamscan_CL.zip | A total of 1125 files corresponding to the 1125 clusters. The predicted pfam_models are listed in each file |
+| feature_matrix_processing.jl | To scale all features to 0 - 1 and remove features with < 1% variation |
+| feature_matrix_A.csv | The combined features, which is the input file of "feature_matrix_processing.jl" |
