@@ -1,4 +1,4 @@
-#= feature importance analysis: Fix "smallest" to 0, and then randomly remove features in combinations of 16 to 20 features. 
+#= feature importance analysis: fix "smallest" to 0 and then randomly remove features in combinations of 16 to 20 features. 
 	Julia v1.9.1
 	MLJ v0.19.2
 	DataFrames v1.6.1
