@@ -17,10 +17,9 @@ Folder "data_file" contains the input files for the scripts.
 | feature_matrix_processing.jl | To scale all features to 0 - 1 and remove features with < 1% variation |
 | feature_matrix_A.csv | The combined features, which is the input file of "feature_matrix_processing.jl" |
 | regressor_tuning.jl | Hyperparameters tuning for the base models |
-| feature_matrix_F.csv | The data matrix for model training, which contains target Psum and features |
+| feature_matrix_F3.csv | The data matrix for model training, which contains target Psum and features |
 | model_stack_searching.jl | Searching for the best base model combinations for model stack |
-| feature_analysis_round1.jl | Feature importance analysis: test features one by one |
-| feature_analysis_rounds.jl | Feature importance analysis: remove 2 features at one time |
-| feature_analysis_Luck1.jl | Feature importance analysis: randomly remove features in combinations of 3 to 20 features |
-| feature_analysis_Luck2.jl | Feature importance analysis: fix "smallest" to 0 and then randomly remove features in combinations of 16 to 20 features |
+| feature_analysis_single.jl | Feature importance analysis: test features one by one |
+| feature_analysis_double.jl | Feature importance analysis: remove 2 features at one time |
+| feature_analysis_Luck.jl | Feature importance analysis: dropping "smallest" is prefixed and then randomly remove features in combinations of 4 to 8 features |
 | feature_names.csv | Contain all feature names except for "smallest". It will be used by feature_analysis_Luck2.jl |
