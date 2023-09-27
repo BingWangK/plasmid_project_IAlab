@@ -60,9 +60,9 @@ close(historyfile)
 
 # split the dataset and get the baseline
 train, df_test = partition(df_origin, 0.8, shuffle=true, rng=479)
-df_test2 = filter(row -> row.sum_of_P > 1, df_test)
-df_minor = filter(row -> row.sum_of_P > 1.2, train)
-df_minor2 = filter(row -> row.sum_of_P > 2.5, train)
+df_test2 = filter(row -> row.Psum > 1, df_test)
+df_minor = filter(row -> row.Psum > 1.2, train)
+df_minor2 = filter(row -> row.Psum > 2.5, train)
 num_minor = nrows(df_minor)
 num_minor2 = nrows(df_minor2)
 newdata = smote(df_minor, floor(Int64, round(num_minor*2)))
