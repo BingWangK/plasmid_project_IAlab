@@ -25,3 +25,4 @@ Folder "data_file" contains the input files for the scripts.
 | feature_names.csv | Contain all feature names except for "smallest". It will be used by feature_analysis_Luck2.jl |
 | feature_analysis_Luck7.jl | Feature importance analysis: randomly remove features in combinations of 7 features |
 | feature_type_assignment.jl | Assign features to feature types |
+| all_feature_types.csv | Contains feature names and the corresponding feature types |
