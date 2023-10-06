@@ -1,0 +1,141 @@
+﻿removed_feature_name,Type
+PF00034.24,beneficial traits
+PF00702.29,beneficial traits
+PF02775.24,beneficial traits
+PF02776.21,beneficial traits
+PF13442.9,beneficial traits
+PF00753.30,beneficial traits
+PF11799.11,beneficial traits
+PF13520.9,beneficial traits
+PF00817.23,beneficial traits
+PF07732.18,beneficial traits
+PF00145.20,counter-defense
+PF06290.14,counter-defense
+PF06952.14,counter-defense
+PF00436.28,counter-defense
+PF00126.30,DNA binding
+PF00440.26,DNA binding
+PF00486.31,DNA binding
+PF01022.23,DNA binding
+PF08535.13,DNA binding
+PF13276.9,DNA binding
+PF13518.9,DNA binding
+PF13560.9,DNA binding
+PF14579.9,DNA binding
+PF16509.8,DNA binding
+PF03466.23,inducer binding
+MOBC,mobility
+MOBF,mobility
+MOBH,mobility
+MOBP,mobility
+MOBQ,mobility
+MOBV,mobility
+MPF_F,mobility
+MPF_I,mobility
+MPF_T,mobility
+oriT_MOBP,mobility
+PF00462.27,mobility
+PF00589.25,mobility
+PF00665.29,mobility
+PF01464.23,mobility
+PF01527.23,mobility
+PF01609.24,mobility
+PF02899.20,mobility
+PF03135.17,mobility
+PF03524.18,mobility
+PF03743.17,mobility
+PF04335.16,mobility
+PF04610.17,mobility
+PF04956.16,mobility
+PF05101.16,mobility
+PF05309.14,mobility
+PF05513.14,mobility
+PF06122.14,mobility
+PF06586.14,mobility
+PF06986.14,mobility
+PF07424.14,mobility
+PF07996.14,mobility
+PF08534.13,mobility
+PF08751.14,mobility
+PF09673.13,mobility
+PF09676.13,mobility
+PF09677.13,mobility
+PF11393.11,mobility
+PF12293.11,mobility
+PF13007.10,mobility
+PF13333.9,mobility
+PF13586.9,mobility
+PF13610.9,mobility
+PF13683.9,mobility
+PF13728.9,mobility
+PF13751.9,mobility
+PF13817.9,mobility
+PF16816.8,mobility
+PF16932.8,mobility
+PF18555.4,mobility
+PF18821.4,mobility
+average,plasmid backbone
+circular,plasmid backbone
+high,plasmid backbone
+higher,plasmid backbone
+large,plasmid backbone
+linear,plasmid backbone
+low,plasmid backbone
+lower,plasmid backbone
+mean,plasmid backbone
+small,plasmid backbone
+smallest,plasmid backbone
+PF00239.24,plasmid maintenance
+PF00717.26,plasmid maintenance
+PF00816.24,plasmid maintenance
+PF01131.23,plasmid maintenance
+PF01751.25,plasmid maintenance
+PF02195.21,plasmid maintenance
+PF02796.18,plasmid maintenance
+PF02811.22,plasmid maintenance
+PF06406.14,plasmid maintenance
+PF08388.14,plasmid maintenance
+PF13155.9,plasmid maintenance
+PF13342.9,plasmid maintenance
+PF17657.4,plasmid maintenance
+rep_cluster_707,plasmid maintenance
+PF07733.15,plasmid maintenance
+PF00005.30,P-loop_NTPase
+PF00122.23,P-loop_NTPase
+PF00271.34,P-loop_NTPase
+PF00437.23,P-loop_NTPase
+PF01443.21,P-loop_NTPase
+PF02374.18,P-loop_NTPase
+PF02463.22,P-loop_NTPase
+PF02534.17,P-loop_NTPase
+PF04945.16,P-loop_NTPase
+PF06564.15,P-loop_NTPase
+PF07015.14,P-loop_NTPase
+PF07728.17,P-loop_NTPase
+PF09140.14,P-loop_NTPase
+PF10609.12,P-loop_NTPase
+PF12696.10,P-loop_NTPase
+PF13604.9,P-loop_NTPase
+PF13671.9,P-loop_NTPase
+PF19044.3,P-loop_NTPase
+PF13304.9,P-loop_NTPase
+PF01266.27,Rossmann
+PF02737.21,Rossmann
+PF12831.10,Rossmann
+PF13434.9,Rossmann
+PF01850.24,TA
+PF00497.23,transmembrane transporters
+PF00528.25,transmembrane transporters
+PF00532.24,transmembrane transporters
+PF00892.23,transmembrane transporters
+PF01547.28,transmembrane transporters
+PF13416.9,transmembrane transporters
+PF07690.19,transmembrane transporters
+PF02518.29,unkown
+PF05284.15,unkown
+PF06067.14,unkown
+PF13154.9,unkown
+PF13340.9,unkown
+PF13700.9,unkown
+PF13708.9,unkown
+PF19357.2,unkown
