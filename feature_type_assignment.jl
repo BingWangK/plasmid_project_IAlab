@@ -7,10 +7,10 @@
 using DataFrames
 using CSV
 
-# "feature_combinations.csv" contains feature combinations that we want to assign feature types. "all_features.csv" contains feature names and the corresponding type categories.
+# "feature_combinations.csv" contains feature combinations that we want to assign feature types. "all_feature_types.csv" contains feature names and the corresponding type categories.
 df_combs = CSV.read("feature_combinations.csv", DataFrame)
 combs = df_combs[!, 1]
-df_types = CSV.read("all_features.csv", DataFrame)
+df_types = CSV.read("all_feature_types.csv", DataFrame)
 # store types to dictionary
 dic_types = Dict()
 for row in eachrow(df_types)
