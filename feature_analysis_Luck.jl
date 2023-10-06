@@ -61,7 +61,7 @@ historyfile = open("Luck_$run_id.txt", "w")
 println(historyfile, "removed_feature_name", "\t", "MSE_test", "\t", "r2_test", "\t",  "MSE_test(P>1)")
 close(historyfile)
 
-# split the dataset and get the baseline
+# split the dataset
 train, df_test = partition(df_origin, 0.8, shuffle=true, rng=479)
 df_test2 = filter(row -> row.Psum > 1, df_test)
 df_minor = filter(row -> row.Psum > 1.2, train)
@@ -71,27 +71,6 @@ num_minor2 = nrows(df_minor2)
 newdata = smote(df_minor, floor(Int64, round(num_minor*2)))
 newdata2 = smote(df_minor2, floor(Int64, round(num_minor2*1)))
 df_train = vcat(train, DataFrame(newdata), DataFrame(newdata2))
-X = df_train[!, 2:end]
-y = df_train[!, 1]
-X_test = df_test[!, 2:end]
-y_test = df_test[!, 1]
-X_test2 = df_test2[!, 2:end]
-y_test2 = df_test2[!, 1]
-
-mach = machine(stack_model, X, y)
-MLJ.fit!(mach, force=true)
-       
-y_pred = MLJ.predict_mode(mach, X_test)
-y_pred2 = MLJ.predict_mode(mach, X_test2)
-mse = mean((y_pred .- y_test).^2)
-mse2 = mean((y_pred2 .- y_test2).^2)
-ssr = sum((y_pred .- y_test).^2)
-sst = sum((y_test .- mean(y_test)).^2)
-r2 = 1.0 - ssr / sst
-
-historyfile = open("Luck_$run_id.txt", "a")
-println(historyfile, "baseline", "\t", mse, "\t", r2, "\t", mse2)
-close(historyfile)
 
 # randomly remove features
 tested_combinations = [] # record the tested combinations to avoid redundant testing
