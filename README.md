@@ -23,3 +23,5 @@ Folder "data_file" contains the input files for the scripts.
 | feature_analysis_double.jl | Feature importance analysis: remove 2 features at one time |
 | feature_analysis_Luck.jl | Feature importance analysis: dropping "smallest" is prefixed and then randomly remove features in combinations of 4 to 8 features |
 | feature_names.csv | Contain all feature names except for "smallest". It will be used by feature_analysis_Luck2.jl |
+| feature_analysis_Luck7.jl | Feature importance analysis: randomly remove features in combinations of 7 features |
+| feature_type_assignment.jl | Assign features to feature types |
