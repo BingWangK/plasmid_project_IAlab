@@ -1,7 +1,7 @@
 # plasmid_project_IAlab
 The ANI edgeweight file for plasmid clustering analysis, plasmid network files in Cytoscape format, and the final data matrix for model training and testing are deposited to DRYAD (https://datadryad.org/stash/share/bZb79dp97O3KpkRaFpWLEedGlGLH6X6B9dGL9AmUgU0).
 
-This repository contains necessay code and files for repeating the results described in the manuscript.
+This repository contains necessay code for repeating the results described in the manuscript.
 
 Folder "data_file" contains the input files for the scripts.
 
@@ -29,3 +29,6 @@ Folder "data_file" contains the input files for the scripts.
 | feature_analysis_Luck7.jl | Feature importance analysis: randomly remove features in combinations of 7 features |
 | feature_type_assignment.jl | Assign features to feature types |
 | all_feature_types.csv | Contains feature names and the corresponding feature types |
+
+
+If you have any questions about the code in this repository, please contact us at: wang.13377@osu.edu; artsimovitch.1@osu.edu
