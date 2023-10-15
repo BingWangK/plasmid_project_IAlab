@@ -2,11 +2,11 @@
 	Julia v1.9.1
 	MLJ v0.19.2
 	DataFrames v1.6.1
-       CSV v0.10.11
-       MLJEnsembles v0.3.3
-       ProgressMeter v1.7.2
+        CSV v0.10.11
+        MLJEnsembles v0.3.3
+        ProgressMeter v1.7.2
 	Random
-       Resample v1.0.2
+        Resample v1.0.2
 =#
 
 using MLJ
@@ -17,7 +17,7 @@ using Random
 using Resample
 using ProgressMeter
 
-run_id = "luck_Sept3"
+run_id = "run_id"
 draw_num=50000 # luck guess rounds
 min_comb=4 # min number of elements in combination
 max_comb=8 # max number of elements in combination
