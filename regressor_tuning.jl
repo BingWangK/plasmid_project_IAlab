@@ -1,4 +1,4 @@
-#= base models hyperparameters tuning
+#= base models hyperparameters tuning. Uncomment the desired model for tuning. The The hyperparameters at lines 121 - 129 need to be updated according to the desired model.
 	Julia v1.9.1
 	MLJ v0.19.2
 	DataFrames v1.6.1
@@ -19,8 +19,8 @@ using Resample
 
 train_id="run_id"
 
-# split dataset for tuning. "feature_matrix_F.csv" is the data matrix containing target Psum and the features
-df_origin = CSV.read("feature_matrix_F.csv", DataFrame)
+# split dataset for tuning. "feature_matrix_F3.csv" is the data matrix containing target Psum and the features
+df_origin = CSV.read("feature_matrix_F3.csv", DataFrame)
 train, df_test = partition(df_origin, 0.8, shuffle=true, rng=123)
 sort!(df_test, :Psum)
 df_minor = filter(row -> row.Psum > 1.2, train)
