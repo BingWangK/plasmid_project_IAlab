@@ -2,11 +2,11 @@
 	Julia v1.9.1
 	MLJ v0.19.2
 	DataFrames v1.6.1
-       CSV v0.10.11
-       MLJEnsembles v0.3.3
-       Combinatorics v1.0.2
+        CSV v0.10.11
+	MLJEnsembles v0.3.3
+        Combinatorics v1.0.2
 	Random
-       Resample v1.0.2
+        Resample v1.0.2
 =#
 
 using MLJ
@@ -29,17 +29,19 @@ cat = @MLJ.load CatBoostRegressor pkg=CatBoost
 evo = @MLJ.load EvoTreeRegressor pkg=EvoTrees #v0.14.11
 random = @MLJ.load RandomForestRegressor pkg=DecisionTree
 decision = @MLJ.load DecisionTreeRegressor pkg=DecisionTree
+boost = @MLJ.load XGBoostRegressor pkg=XGBoost
 light = @MLJ.load LGBMRegressor pkg=LightGBM
 
 tiger=cat(loss_function="Quantile", iterations=1500, depth=6, learning_rate=0.1, l2_leaf_reg=1, border_count=10)
 forest=random(n_trees = 130, n_subfeatures = 70, max_depth = 31, min_samples_split =2)
 decided=decision(max_depth = 23, min_samples_split = 4, n_subfeatures = 70, min_samples_leaf = 10)
 evoed=evo(loss=:tweedie, nrounds = 70, gamma = 5.1, eta = 0.5, max_depth =7, colsample = 0.822, nbins = 18)
-lighter = light(num_iterations = 100, max_depth = 5, feature_fraction = 0.8, learning_rate = 0.055,min_data_in_leaf = 25, lambda_l1 = 1, min_gain_to_split = 1, time_out = 14400)
+booster=boost(eta = 0.2556, gamma = 2, max_depth = 5, colsample_bylevel = 0.6, lambda =5.0)
+lighter = light(num_iterations = 200, max_depth = 5, feature_fraction = 0.9, learning_rate = 0.055,min_data_in_leaf = 25, lambda_l1 = 2, min_gain_to_split = 1, time_out = 14400)
 
 # generate the combinations
-base_list = [tiger, evoed, forest, decided, lighter]
-base_number = [1, 2, 3, 4, 5]
+base_list = [tiger, evoed, forest, decided, booster, lighter]
+base_number = [1, 2, 3, 4, 5, 6]
 combination = collect(combinations(base_number))
 
 # logging the performance on testing dataset
@@ -58,14 +60,14 @@ for comb in combination
               resampling=CV(nfolds=5, shuffle = true),
               model1=base_models[1],
               model2=base_models[2])
-              elseif L == 3
+        	elseif L == 3
                      stack_model = Stack(;metalearner=learner,
                      measures=rms,
                      resampling=CV(nfolds=5, shuffle = true),
                      model1=base_models[1],
                      model2=base_models[2],
                      model3=base_models[3])
-              elseif L == 4
+        	elseif L == 4
                      stack_model = Stack(;metalearner=learner,
                      measures=rms,
                      resampling=CV(nfolds=5, shuffle = true),
@@ -73,15 +75,25 @@ for comb in combination
                      model2=base_models[2],
                      model3=base_models[3],
                      model4=base_models[4])
-                     elseif L == 5
-                            stack_model = Stack(;metalearner=learner,
+        	elseif L == 5
+			stack_model = Stack(;metalearner=learner,
                             measures=rms,
-                            resampling=CV(nfolds=5, shuffle = true),
-                            model1=base_models[1],
-                            model2=base_models[2],
-                            model3=base_models[3],
-                            model4=base_models[4],
-                            model5=base_models[5])
+                        resampling=CV(nfolds=5, shuffle = true),
+                        model1=base_models[1],
+                        model2=base_models[2],
+                        model3=base_models[3],
+                        model4=base_models[4],
+                        model5=base_models[5])
+		elseif L == 6
+		 	stack_model = Stack(;metalearner=learner,
+                            measures=rms,
+                        resampling=CV(nfolds=5, shuffle = true),
+                        model1=base_models[1],
+                        model2=base_models[2],
+                        model3=base_models[3],
+                        model4=base_models[4],
+                        model5=base_models[5],
+			model6=base_models[6])
                      end
      
        # train a model stack 5 times by splitting dataset into training and testing datasets
