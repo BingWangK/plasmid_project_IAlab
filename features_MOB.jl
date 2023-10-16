@@ -1,11 +1,10 @@
 #= prepare feature replicon type(s), relaxase type(s), mate-pair formation type, and origin of transfer type.
-Need to change file_name at lines 13 and 38 before started.
+Need to change file_name at line 12 before started.
        Julia v1.9.1
        CSV v0.10.11
        DataFrames v1.6.1
        StatsBase v0.33.21
 =# 
-
 using DataFrames
 using CSV
 using StatsBase
@@ -35,7 +34,7 @@ for group in grouped_df
 end
 
 # save the results
-df_rep = CSV.File("repT-ID.csv", header=false) |> DataFrame # corresponding files containing all of the unique categorical values of a feature: repT-ID.csv, relaxaseT-ID.csv, mpfT-ID.csv, oriT-ID.csv
+df_rep = CSV.File("$file_name-ID.csv", header=false) |> DataFrame # corresponding files containing all of the unique categorical values of a feature: repT-ID.csv, relaxaseT-ID.csv, mpfT-ID.csv, oriT-ID.csv
 subfeatures = Matrix(df_rep)
 textfile = open("$file_name.txt", "w")
 
