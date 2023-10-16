@@ -11,7 +11,7 @@ import igraph as ig
 import pandas as pd
 import networkx as nx
 
-# import plasmid pairs with transformed edgeweights from file "fastANI_edgeweights"
+# import plasmid pairs with transformed edgeweights from file "fastANI_edgeweights". The edgeweights are deposited to DRYAD, please see README for the link.
 df = pd.read_table('fastANI_edgeweights', header=None)
 
 # converts to igraph object
