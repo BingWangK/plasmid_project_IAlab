@@ -2,11 +2,11 @@
 	Julia v1.9.1
 	MLJ v0.19.2
 	DataFrames v1.6.1
-       CSV v0.10.11
-       MLJEnsembles v0.3.3
+        CSV v0.10.11
+        MLJEnsembles v0.3.3
 	Random
-       Resample v1.0.2
-       ProgressMeter v1.7.2
+        Resample v1.0.2
+        ProgressMeter v1.7.2
 =#
 
 using MLJ
@@ -17,7 +17,7 @@ using Random
 using Resample
 using ProgressMeter
 
-run_id = "luck7_Oct3"
+run_id = "run_id"
 draw_num = 11000 # number of iterations
 standard = 0.7 # starting cutoff of MSE of testing dataset
 
