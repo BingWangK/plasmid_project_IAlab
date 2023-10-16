@@ -1,11 +1,10 @@
-#= prepare feature size, GC, topology.
-Need to change file_name at line 13 and header at lines 40 - 53 before started.
+#= prepare features size, GC, topology.
+Need to change file_name at line 12, and uncomment the corresponding headers at lines 40 - 53 before started.
        Julia v1.9.1
        CSV v0.10.11
        DataFrames v1.6.1
        StatsBase v0.33.21
 =# 
-
 using DataFrames
 using CSV
 using StatsBase
