@@ -17,8 +17,8 @@ using Combinatorics
 using Random
 using Resample
 
-# "feature_matrix_F.csv" is the data matrix containing target Psum and the features
-df_origin = CSV.read("feature_matrix_F.csv", DataFrame)
+# "feature_matrix_F3.csv" is the data matrix containing target Psum and the features
+df_origin = CSV.read("feature_matrix_F3.csv", DataFrame)
 
 # load meta-learner
 meta = @MLJ.load LinearRegressor pkg=GLM
