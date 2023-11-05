@@ -1,7 +1,7 @@
 # plasmid_project_IAlab
 The ANI edgeweight file for plasmid clustering analysis, plasmid network files in Cytoscape format, and the final data matrix for model training and testing are deposited to DRYAD (https://doi.org/doi:10.5061/dryad.1g1jwsv31).
 
-This repository contains necessay code for repeating the results described in the manuscript.
+This repository contains necessay code for repeating the results described in the manuscript "Machine Learning Suggests That Small Size Helps Broaden Plasmid Host Range" (https://doi.org/10.3390/genes14112044).
 
 Folder "data_file" contains the input files for the scripts.
 
