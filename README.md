@@ -25,7 +25,7 @@ Use below command to keep edges between nodes from the same cluster:
 $ awk 'NR == FNR { group[$1] = $2; next } (group[$1] == group[$2]) { print }' cluster_output.txt fastANI_edgeweights > fastANI_edgeweights_grouped
 ```
 
-Then load "fastANI_edgeweights_grouped" into Cytoscape and map “MOB_metadata.txt”. if one wish to do more analysis, “cytoscape_metadata.txt” can also be mapped. This creates "plasmid_net_grouped_MOB.cys".
+Then load "fastANI_edgeweights_grouped" into Cytoscape and metadata was added with “MOB_metadata.txt”. if one wish to do more analysis, “cytoscape_metadata.txt” can also be mapped. This creates "plasmid_net_grouped_MOB.cys".
 
 6. Calculate the distribution possibility for each cluster using “distribution_possibility.jl”. The output “Psum.txt” contains the final calculated distribution possibilities, which will be used as the output vector in the model training.
 
