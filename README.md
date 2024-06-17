@@ -25,7 +25,7 @@ Use below command to keep edges between nodes from the same cluster:
 $ awk 'NR == FNR { group[$1] = $2; next } (group[$1] == group[$2]) { print }' cluster_output.txt fastANI_edgeweights > fastANI_edgeweights_grouped
 ```
 
-Then load "fastANI_edgeweights_grouped" into Cytoscape and metadata was added with “MOB_metadata.txt”. if one wish to do more analysis, “cytoscape_metadata.txt” can also be mapped. This creates "plasmid_net_grouped_MOB.cys".
+Then load "fastANI_edgeweights_grouped" into Cytoscape and metadata was added with “MOB_metadata.txt”. if one wishes to do more analysis, “cytoscape_metadata.txt” can also be mapped. This creates "plasmid_net_grouped_MOB.cys".
 
 6. Calculate the distribution possibility for each cluster using “distribution_possibility.jl”. The output “Psum.txt” contains the final calculated distribution possibilities, which will be used as the output vector in the model training.
 
@@ -48,17 +48,17 @@ Then load "fastANI_edgeweights_grouped" into Cytoscape and metadata was added wi
 | clusters_output.txt | Output of “leidenalg_CPM.py”. Because the cluster numbering is random, to be consistent with the published data, we provided this output file |
 | distribution_possibility.jl | Calculate distribution possibility for each plasmid cluster|
 | plasmid_tax.csv | Containing taxonomic lineage information, which will be used in step 1 of "distribution_possibility.jl" |
-| APntax.csv and Pn.csv | "APntax.csv" contains the the average plasmid number per cluster (APntax) for a given taxon. "Pn.csv" has the raw plasmid number (Pn) of each taxon, which will be used in step 2 of "distribution_possibility.jl" |
+| APntax.csv and Pn.csv | "APntax.csv" contains the average plasmid number per cluster (APntax) for a given taxon. "Pn.csv" has the raw plasmid number (Pn) of each taxon, which will be used in step 2 of "distribution_possibility.jl" |
 | NPntax.csv | "NPntax.csv" contains the normalized plasmid number of each taxon, which will be used in step 3 of "distribution_possibility.jl" |
 | features_size_GC_topology.jl, feature_MOB.jl | Conversion of categorical values of the features to fraction of total for each cluster |
 | size.csv, GC.csv, topology.csv, repT-ID.csv, repT.csv, relaxaseT-ID.csv, relaxaseT.csv, mpfT-ID.csv, mpfT.csv, oriT-ID.csv, oriT.csv | The original categorical values of these features |
 | features_pfamscan.sh | Calculate the percentage of the pfam_models in each cluster |
 | pfamscan_CL.txt | It contains the file names that need to be processed by features_pfamscan.sh |
-| pfamscan_CL.zip | A total of 1125 files corresponding to the 1125 clusters. The predicted pfam_models are listed in each file |
+| pfamscan_CL.zip | A total of 1125 files correspond to the 1125 clusters. The predicted pfam_models are listed in each file |
 | feature_matrix_processing.jl | To scale all features to 0 - 1 and remove features with < 1% variation |
 | feature_matrix_A.csv | The combined features, which is the input file of "feature_matrix_processing.jl" |
 | regressor_tuning.jl | Hyperparameters tuning for the base models |
-| feature_matrix_F3.csv | The data matrix for model training, which contains target Psum and features |
+| feature_matrix_F3.csv | The data matrix for model training contains target Psum and normalized feature vectors |
 | model_stack_searching.jl | Searching for the best base model combinations for model stack |
 | feature_analysis_single.jl | Feature importance analysis: test features one by one |
 | feature_analysis_double.jl | Feature importance analysis: remove 2 features at one time |
