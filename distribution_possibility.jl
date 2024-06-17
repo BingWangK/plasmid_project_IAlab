@@ -7,6 +7,8 @@
        Statistics v1.9.0
 =# 
 
+# The output of step 1 was used to generate "APntax.csv" and "Pn.csv" in Excel.
+
 # step 1: for a given cluster, number of plasmids of each taxon was calculated for taxonomic rank Genus, Family, Order, Class, and Phylum, respectively.
 
 using CSV, DataFrames, StatsBase
@@ -128,6 +130,8 @@ for key in keys(dic_cls)
 end
 close(txtfile)
 
+# "NPntax.txt" was converted to CSV file "NPntax.csv" in Excel.
+
 # step 3: calculate the distribution score (DSrank) for a given rank
 
 using DataStructures, Statistics
@@ -204,7 +208,7 @@ for (key, subdic) in dic_P
     end
 end
 
-# save the result to "score_matrix.txt"
+# save the result to "score_matrix.txt" for examination purpose
 txtfile = open("score_matrix.txt", "w")
 println(txtfile, "Cls", "\t", "genus_possibility", "\t", "family_possibility", "\t", "order_possibility", "\t", "class_possibility", "\t", "phylum_possibility", "\t")
 for key in keys(dic_P)
