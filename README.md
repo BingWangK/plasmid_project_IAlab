@@ -15,7 +15,7 @@ $ awk 'BEGIN{FS=OFS="\t"} {if ($3 >= 95) $3 = $3/100; else $3 = 1 / (1 + 20 * (1
 
 The “fastANI_edgeweights” file can be downloaded from DRYAD (https://doi.org/doi:10.5061/dryad.1g1jwsv31). The downloaded zip file contains (1) “fastANI_edgeweights”; (2) “plasmid_net_connected.cys”: The original plasmid network; (3) “plasmid_net_grouped_MOB.cys”: The clusters were separated based on clusters (Fig. 2 of the publication). (4) “feature_matrix_F3.csv”: The final data matrix for machine learning model training and testing.
 
-3. Plasmids clustering was performed using the Leiden algorithm with “fastANI_edgeweights” and “leidenalg_CPM.py”. We used python3.7-conda4.5 environment to run the program. The resulting “plasmid_clusters.gml” file contains the network graph and cluster membership. The “clusters_output.txt” records the extracted cluster membership from the “plasmid_clusters.gml” file. Clusters with < 3 members are removed.
+3. Plasmids clustering was performed using the Leiden algorithm with “fastANI_edgeweights” and “leidenalg_CPM.py”. We used python3.7-conda4.5 environment to run the program. The resulting “plasmid_clusters.gml” file contains the network graph and cluster membership. The “cluster_output.txt” records the extracted cluster membership from the “plasmid_clusters.gml” file. Clusters with < 3 members are removed.
 
 4. The “plasmid_clusters.gml” can be visualized with Cytoscape. However, to facilitate metadata mapping, the “fastANI_edgeweights” was loaded into Cytoscape, metadata from “cytoscape_metadata.txt” was imported, and plasmids not in a cluster were removed. This created the original plasmid network “plasmid_net_connected.cys”. 
 
