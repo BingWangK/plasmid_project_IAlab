@@ -1,4 +1,4 @@
-# plasmid_project_IAlab
+# plasmid_spreading_potential
 
 This repository contains the necessary code for repeating the results described in the publication "Machine Learning Suggests That Small Size Helps Broaden Plasmid Host Range" (https://doi.org/10.3390/genes14112044). Folder "data_file" contains the input files for the scripts.
 
